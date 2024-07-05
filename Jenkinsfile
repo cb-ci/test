@@ -49,6 +49,7 @@ spec:
             steps {
                 sh "ls -la"
                 sleep 1000
+                sh "git config --global --add safe.directory /home/jenkins/agent/workspace/testPipelineInit"
                 sh 'git diff HEAD^ HEAD -- branches'
             }
         }
