@@ -52,7 +52,7 @@ spec:
                 echo "removed lines"
                 sh 'git diff HEAD^ HEAD -- branches  |grep -o "^-#.*$"'
                 echo "added lines"
-                sh 'git diff HEAD^ HEAD -- branches  |grep -o "^##.*$"'
+                sh 'git diff HEAD^ HEAD -- branches  |grep -o "^+#.*$"'
                 sleep 1000
             }
         }
