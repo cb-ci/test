@@ -53,7 +53,7 @@ spec:
                 sh "git status"
                 sh 'git diff HEAD^^ HEAD -- branches'
                 echo "added lines"
-                sh 'git diff HEAD^ HEAD -- branches'
+                sh 'git diff HEAD^^ HEAD -- branches'
             }
         }
     }
