@@ -48,6 +48,7 @@ spec:
         stage('Main') {
             steps {
                 sh "ls -la"
+                sleep 1000
                 sh 'git diff HEAD^ HEAD -- branches'
             }
         }
