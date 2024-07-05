@@ -17,7 +17,7 @@ podTemplate(
         stage('Build') {
             container('ciutils') {
                 // Run  commands
-                sh 'ls -l'
+                sh 'ls -la'
             }
         }
     }
@@ -47,6 +47,7 @@ spec:
     stages {
         stage('Main') {
             steps {
+                sh "ls -la"
                 sh 'git diff HEAD^ HEAD -- branches'
             }
         }
