@@ -51,7 +51,7 @@ spec:
                 sh "git config --global --add safe.directory ${WORKSPACE}"
                 echo "removed lines"
                 sh "git status"
-                sh 'git diff HEAD^ HEAD -- branches'
+                sh 'git diff HEAD-2 HEAD -- branches'
                 echo "added lines"
                 sh "git diff HEAD^ HEAD -- branches  |grep ^+#"
             }
