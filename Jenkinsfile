@@ -49,7 +49,10 @@ spec:
             steps {
                 sh "ls -la"                
                 sh "git config --global --add safe.directory ${WORKSPACE}"
-                sh 'git diff HEAD^ HEAD -- branches'
+                echo "removed lines"
+                sh 'git diff HEAD^ HEAD -- branches  |grep -o "^-#.*$"'
+                echo "added lines"
+                sh 'git diff HEAD^ HEAD -- branches  |grep -o "^##.*$"'
                 sleep 1000
             }
         }
