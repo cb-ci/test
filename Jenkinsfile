@@ -50,9 +50,9 @@ spec:
                 sh "ls -la"                
                 sh "git config --global --add safe.directory ${WORKSPACE}"
                 echo "removed lines"
-                sh "git diff HEAD^ HEAD -- branches  |grep -o '^-#.*'"
+                sh "git diff HEAD^ HEAD -- branches  |grep ^-#"
                 echo "added lines"
-                sh "git diff HEAD^ HEAD -- branches  |grep -o '^+#.*'"
+                sh "git diff HEAD^ HEAD -- branches  |grep ^+#"
             }
         }
     }
