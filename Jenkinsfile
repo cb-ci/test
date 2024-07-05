@@ -47,10 +47,10 @@ spec:
     stages {
         stage('Main') {
             steps {
-                sh "ls -la"
-                sleep 1000
-                sh "git config --global --add safe.directory /home/jenkins/agent/workspace/testPipelineInit"
+                sh "ls -la"                
+                sh "git config --global --add safe.directory ${WORKSPACE}"
                 sh 'git diff HEAD^ HEAD -- branches'
+                sleep 1000
             }
         }
     }
