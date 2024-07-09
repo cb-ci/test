@@ -1,6 +1,6 @@
 #!groovy
 
-// Define the pod template
+/*
 podTemplate(
     label: 'mypod',
     containers: [
@@ -12,17 +12,17 @@ podTemplate(
         )
     ]
 ) {
-    // Use the Kubernetes pod as the agent
+
     node('mypod') {
         stage('Build') {
             container('ciutils') {
-                // Run  commands
+
                 sh 'ls -la'
             }
         }
     }
 }
-
+*/
 
 // Uses Declarative syntax to run commands inside a container.
 pipeline {
